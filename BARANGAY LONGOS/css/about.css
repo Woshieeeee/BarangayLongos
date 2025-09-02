@@ -1,0 +1,165 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styles (from your existing CSS) */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-link {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* Hidden on large screens */
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+}
+
+.main-menu li {
+  margin-left: 20px;
+}
+
+.main-menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.main-menu li a:hover,
+.main-menu li a.active {
+  background-color: #fff;
+  color: #222;
+}
+
+/* Responsive menu styles */
+@media (max-width: 768px) {
+  .menu-link {
+    display: block;
+  }
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #222;
+    flex-direction: column;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .main-nav.show {
+    max-height: 500px; /* enough to show all menu items */
+  }
+  .main-menu {
+    flex-direction: column;
+  }
+  .main-menu li {
+    margin: 10px 0;
+  }
+}
+
+/* About section styles */
+.divSeven {
+  padding: 50px 20px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.headingSec {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.headingSec h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.headingSec h1 .highlight {
+  color: #e74c3c; /* your accent color */
+}
+
+.headingSec p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.firstSec {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+  border-bottom: 2px solid #e74c3c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
